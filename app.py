@@ -33,10 +33,11 @@ def home():
 
         probability = f"Probability: {phishing_prob}%"
 
-        if result[0] == 1:
-            prediction = "Phishing Email"
+       
+        if result[0] == 1 or links:
+           prediction = "Phishing Email"
         else:
-            prediction = "Safe Email"
+           prediction = "Safe Email"
 
 
     return render_template(
