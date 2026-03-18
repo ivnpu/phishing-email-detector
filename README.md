@@ -1,86 +1,94 @@
-# AI Phishing Email Detector
+# 🎯 Phishing Email Detection System
 
-A web-based application that detects phishing emails using Machine Learning.
+## 📌 Overview
 
-The system analyzes email content and predicts whether the message is **Safe** or **Phishing**.
+An AI-powered web application designed to detect phishing emails using machine learning techniques.
+The system analyzes email content and classifies it as **phishing** or **legitimate**, helping users identify potential cyber threats بسهولة.
 
-## Live Demo
+---
 
-Try the application online:
+## 🚀 Features
 
-https://phishing-email-detector-production.up.railway.app/
+* 📧 Email content analysis
+* 🤖 Machine Learning-based classification
+* ⚡ Fast prediction results
+* 📊 Accuracy display
+* 🌐 Web interface using Flask
 
-## Features
+---
 
-- Detect phishing emails using Machine Learning
-- Analyze email text using TF-IDF vectorization
-- Predict phishing probability
-- Detect suspicious links inside emails
-- Simple and user-friendly web interface
+## 🛠️ Tech Stack
 
-## Technologies Used
+* **Backend:** Python, Flask
+* **Machine Learning:** Scikit-learn
+* **Data Processing:** Pandas
+* **Frontend:** HTML, CSS
 
-Python  
-Flask  
-scikit-learn  
-HTML / CSS  
-Git & GitHub  
+---
 
-## Machine Learning Model
+## 📊 Model Performance
 
-The system uses a Machine Learning model built with:
+* Trained on phishing email dataset
+* Achieves high accuracy in detecting malicious emails
+* Designed for fast and lightweight predictions
 
-TF-IDF Vectorizer – for converting text into numerical features  
-Multinomial Naive Bayes – for classifying emails as phishing or safe  
+---
 
-The model was trained on a phishing email dataset and predicts the probability that an email is malicious.
+## 🌐 Live Demo
 
-## How It Works
+👉 https://phishing-email-detector-production.up.railway.app/
 
-1. The user pastes an email message in the web interface.
-2. The system processes the text using TF-IDF vectorization.
-3. The machine learning model analyzes the email.
-4. The system predicts whether the email is **Safe** or **Phishing**.
-5. If a suspicious link is detected, a warning message is displayed.
+---
 
-## Project Structure
+## 📸 Screenshots
 
-phishing-email-detector
-│
-├── app.py
-├── model.py
-├── phishing_small.csv
-├── requirements.txt
-│
-└── templates
-    └── index.html
+### 🖥️ Home Page
 
-## Installation
+<img width="1095" height="666" alt="لقطة شاشة 2026-03-18 094016" src="https://github.com/user-attachments/assets/33894b33-6b52-4fcf-bc5e-9810a9c5f70e" />
 
-Clone the repository:
 
+### 📊 Detection Result
+
+<img width="1052" height="763" alt="لقطة شاشة 2026-03-18 094236" src="https://github.com/user-attachments/assets/477e7bc0-0ae7-40f5-9b6e-7e6c10de19b2" />
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
 git clone https://github.com/ivnpu/phishing-email-detector.git
-
-Install dependencies:
-
+cd phishing-email-detector
 pip install -r requirements.txt
-
-Run the application:
-
 python app.py
+```
 
-Open in your browser:
-
+Then open:
 http://127.0.0.1:5000
 
-## Future Improvements
+---
 
-- Improve phishing detection accuracy
-- Add URL reputation checking
-- Enhance the user interface
-- Add more cybersecurity detection features
+## 🧪 How It Works
 
-## Author
+1. User enters email content
+2. The system processes the text
+3. Machine learning model analyzes the input
+4. The result is displayed as:
 
-Ali Abdullah  
-Computer Science Student interested in Cybersecurity and Machine Learning.
+   * ✅ Legitimate
+   * ⚠️ Phishing
+
+---
+
+## 📈 Future Improvements
+
+* 🔍 Add probability/confidence score
+* 🧠 Improve model accuracy with advanced algorithms
+* 🌐 Real-time API integration
+* 🎨 Enhance UI/UX design
+
+---
+
+## 👨‍💻 Author
+
+Ali Abdullah
+🔗 https://github.com/ivnpu
