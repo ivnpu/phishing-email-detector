@@ -53,6 +53,31 @@ The system analyzes email content and classifies it as **phishing** or **legitim
 
 ---
 
+## 📊 Model Comparison
+
+To improve the phishing detection system, multiple machine learning models were evaluated and compared.
+
+### Models Tested:
+
+* Multinomial Naive Bayes
+* Logistic Regression
+
+### Results:
+
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Naive Bayes         | 91.3%    |
+| Logistic Regression | 99.0%    |
+
+### Conclusion:
+
+Logistic Regression achieved the highest accuracy and was selected as the final model for the system.
+
+This comparison highlights the importance of model selection in improving machine learning-based cybersecurity solutions.
+
+
+---
+
 ## ⚙️ Installation & Setup
 
 ```bash
