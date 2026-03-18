@@ -3,7 +3,7 @@
 ## 📌 Overview
 
 An AI-powered web application designed to detect phishing emails using machine learning techniques.
-The system analyzes email content and classifies it as **phishing** or **legitimate**, helping users identify potential cyber threats بسهولة.
+The system analyzes email content and classifies it as **phishing** or **legitimate**, helping users identify potential cyber threats .
 
 ---
 
