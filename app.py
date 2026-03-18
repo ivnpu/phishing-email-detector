@@ -1,55 +1,22 @@
+from flask import Flask, render_template, request
 from model import train_model
-import re
-from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
-model, vectorizer = train_model()
+model, vectorizer, accuracy = train_model()
 
-
-@app.route("/", methods=["GET","POST"])
+@app.route('/', methods=['GET', 'POST'])
 def home():
+    prediction = None
 
-    prediction = ""
-    warning = ""
-    probability = ""
-
-    if request.method == "POST":
-
-        email = request.form["email"]
-
-        links = re.findall(r'https?://\S+', email)
-
-        if links:
-            warning = "⚠ Suspicious link detected"
-
+    if request.method == 'POST':
+        email = request.form['email']
         email_vector = vectorizer.transform([email])
+        result = model.predict(email_vector)[0]
 
-        result = model.predict(email_vector)
+        prediction = "Phishing ⚠️" if result == 1 else "Safe ✅"
 
-        prob = model.predict_proba(email_vector)
+    return render_template('index.html', prediction=prediction, accuracy=round(accuracy*100,2))
 
-        phishing_prob = round(prob[0][1] * 100,2)
-
-        probability = f"Probability: {phishing_prob}%"
-
-       
-        if result[0] == 1 or links:
-           prediction = "Phishing Email"
-        else:
-           prediction = "Safe Email"
-
-
-    return render_template(
-        "index.html",
-        prediction=prediction,
-        warning=warning,
-        probability=probability
-    )
-
-
-import os
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+if __name__ == '__main__':
+    app.run(debug=True)
