@@ -16,7 +16,11 @@ def home():
 
         prediction = "Phishing ⚠️" if result == 1 else "Safe ✅"
 
-    return render_template('index.html', prediction=prediction, accuracy=round(accuracy*100,2))
+    return render_template(
+        'index.html',
+        prediction=prediction,
+        accuracy=round(accuracy * 100, 2)
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
